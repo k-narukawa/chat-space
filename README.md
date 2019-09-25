@@ -25,6 +25,7 @@ Things you may want to cover:
 ## userテーブル
 
 |Column|Type|Options|
+|------|----|-------|
 |id|integer|null: false, foreign_key: true|
 |nickname|string|null: false|
 |email|string|unique,null: false|
@@ -32,7 +33,8 @@ Things you may want to cover:
 
 
 ## groupテーブル
-
+|Column|Type|Options|
+|------|----|-------|
 |id|integer|null: false, foreign_key: true|
 |groupname|string|null: false|
 
@@ -51,6 +53,7 @@ Things you may want to cover:
 
 ## messagesテーブル
 |Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 |message|text|

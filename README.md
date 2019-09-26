@@ -22,40 +22,38 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-## userテーブル
+### usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, foreign_key: true|
-|nickname|string|null: false|
+|nickname|string|null: false, index: true|
 |email|string|unique,null: false|
 |password|string|null: false|	
 
 
-## groupテーブル
+### groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, foreign_key: true|
-|groupname|string|null: false|
+|name|string|null: false|
 
 
 
-# groups_usersテーブル
+### groups_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|refrrences|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user	
 
-## messagesテーブル
+### messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 |message|text|
 |image|string|
 

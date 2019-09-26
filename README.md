@@ -30,12 +30,17 @@ Things you may want to cover:
 |email|string|unique,null: false|
 |password|string|null: false|	
 
+### Association
+- belongs_to :user	
+
 
 ### groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 
+### Association
+- belongs_to :group
 
 
 ### groups_usersテーブル
